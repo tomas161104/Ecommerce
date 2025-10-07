@@ -21,6 +21,7 @@ from drf_yasg import openapi
 from apps.reviews.api.router import router_review
 from apps.products.api.router import router_product, router_category
 from apps.payments.api.router import router_payment
+from apps.cart.api.router import router_Cart
 
 
 SchemaView = get_schema_view(
@@ -43,5 +44,6 @@ urlpatterns = [
     path('api/', include(router_review.urls)),
     path('api/', include(router_category.urls)),
     path('api/', include(router_product.urls)),
-    path('api/', include(router_payment.urls))
+    path('api/', include(router_payment.urls)),
+    path('api/', include(router_Cart.urls))
 ]
